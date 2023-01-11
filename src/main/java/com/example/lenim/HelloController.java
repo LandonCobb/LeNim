@@ -10,5 +10,6 @@ public class HelloController {
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to LeNim");
+        System.out.println("Hello Comire");
     }
 }
