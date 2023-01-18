@@ -35,6 +35,7 @@ public class HelloController {
 
         @FXML
         void twoPlayer(MouseEvent event) {
+                player1Name.setVisible(true);
                 start.setVisible(true);
                 player2Name.setVisible(true);
                 player1Name.setText("");
