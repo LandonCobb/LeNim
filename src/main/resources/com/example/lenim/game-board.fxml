@@ -91,6 +91,6 @@
          </image>
       </ImageView>
       <Button fx:id="finishButton" layoutX="468.0" layoutY="508.0" mnemonicParsing="false" text="End Turn" />
-      <Label layoutX="400.0" layoutY="88.0" text="X please choose on or two tokens" />
+      <Label fx:id="gameLbl" layoutX="400.0" layoutY="88.0" text="X please choose on or two tokens" />
    </children>
 </Pane>
