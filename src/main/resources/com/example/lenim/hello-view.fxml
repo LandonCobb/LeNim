@@ -11,9 +11,8 @@
       <Text layoutX="121.0" layoutY="80.0" strokeWidth="0.0" text="Your goal is to NOT be the person who grabs the last token. Players will take turns taking 1-2 tokens until a loser has been decided" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="358.00003051757824" />
       <Button fx:id="twoPlayerBtn" layoutX="416.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#twoPlayer" text="2 Player" />
       <Button fx:id="onePlayerBtn" layoutX="121.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#onePlayer" text="1 Player" />
-      <TextField fx:id="twoPlayer1" layoutX="80.0" layoutY="288.0" promptText="Player 1 Name " visible="false" />
-      <TextField fx:id="twoPlayer2" layoutX="376.0" layoutY="288.0" promptText="Player 2 Name" visible="false" />
       <Button fx:id="start" layoutX="275.0" layoutY="315.0" mnemonicParsing="false" onMouseClicked="#proceed" text="Proceed" visible="false" />
-      <TextField fx:id="onePlayerName" layoutX="225.0" layoutY="187.0" promptText="Player One Name" visible="false" />
+      <TextField fx:id="player1Name" layoutX="225.0" layoutY="187.0" promptText="Player One Name" visible="false" />
+      <TextField fx:id="player2Name" layoutX="225.0" layoutY="233.0" promptText="Player 2 Name" visible="false" />
    </children>
 </Pane>

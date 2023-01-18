@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-
 import java.io.IOException;
 
 
@@ -15,37 +14,30 @@ public class HelloController {
         private Button onePlayerBtn;
 
         @FXML
-        private TextField onePlayerName;
+        private TextField player1Name;
 
         @FXML
         private Button start;
 
         @FXML
-        private TextField twoPlayer1;
-
-        @FXML
-        private TextField twoPlayer2;
+        private TextField player2Name;
 
         @FXML
         private Button twoPlayerBtn;
-
         @FXML
         void onePlayer(MouseEvent event) {
-                onePlayerName.setVisible(true);
+                player1Name.setVisible(true);
                 start.setVisible(true);
-                twoPlayer1.setVisible(false);
-                twoPlayer2.setVisible(false);
-                twoPlayer1.setText("");
-                twoPlayer2.setText("");
+                player2Name.setVisible(false);
+                player1Name.setText("");
+                player2Name.setText("");
         }
 
         @FXML
         void twoPlayer(MouseEvent event) {
-                onePlayerName.setVisible(false);
                 start.setVisible(true);
-                twoPlayer1.setVisible(true);
-                twoPlayer2.setVisible(true);
-                onePlayerName.setText("");
+                player2Name.setVisible(true);
+                player1Name.setText("");
         }
 
         @FXML
