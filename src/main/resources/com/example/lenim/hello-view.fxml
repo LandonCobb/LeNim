@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lenim.HelloController">
    <children>
-      <Text layoutX="244.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to LeNim" />
-      <Text layoutX="121.0" layoutY="127.0" strokeWidth="0.0" text="Your goal is to NOT be the person who grabs the last token. Players will take turns taking 1-2 tokens until a loser has been decided" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="358.00003051757824" />
-      <Button fx:id="twoPlayerBtn" layoutX="416.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#twoPlayer" text="2 Player" />
-      <Button fx:id="onePlayerBtn" layoutX="121.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#onePlayer" text="1 Player" />
+      <Text layoutX="244.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to LeNim" />
+      <Text layoutX="121.0" layoutY="80.0" strokeWidth="0.0" text="Your goal is to NOT be the person who grabs the last token. Players will take turns taking 1-2 tokens until a loser has been decided" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="358.00003051757824" />
+      <Button fx:id="twoPlayerBtn" layoutX="416.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#twoPlayer" text="2 Player" />
+      <Button fx:id="onePlayerBtn" layoutX="121.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#onePlayer" text="1 Player" />
+      <TextField fx:id="twoPlayer1" layoutX="80.0" layoutY="288.0" promptText="Player 1 Name " visible="false" />
+      <TextField fx:id="twoPlayer2" layoutX="376.0" layoutY="288.0" promptText="Player 2 Name" visible="false" />
+      <Button fx:id="start" layoutX="275.0" layoutY="315.0" mnemonicParsing="false" onMouseClicked="#proceed" text="Proceed" visible="false" />
+      <TextField fx:id="onePlayerName" layoutX="225.0" layoutY="187.0" promptText="Player One Name" visible="false" />
    </children>
 </Pane>

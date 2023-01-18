@@ -15,7 +15,7 @@ public class ChangeScene {
     private static Scene scene;
 
     public static void changeScene(Event event, String FMXLFile) throws IOException {
-        URL url = new File("src/main/resources/com/example/lenim" + FMXLFile).toURI().toURL();
+        URL url = new File("src/main/resources/com/example/lenim/" + FMXLFile).toURI().toURL();
         Parent root = FXMLLoader.load(url);
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
