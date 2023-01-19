@@ -50,7 +50,7 @@ public class HelloController {
                 ChangeScene.changeScene(event, "game-board.fxml");
                 }
             else{
-                errorMsg.setText("Please ");
+                errorMsg.setText("Please add names for BOTH players");
             }
             }
             while (!validNames);
