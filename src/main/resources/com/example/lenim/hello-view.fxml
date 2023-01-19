@@ -9,10 +9,11 @@
    <children>
       <Text layoutX="244.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to LeNim" />
       <Text layoutX="121.0" layoutY="80.0" strokeWidth="0.0" text="Your goal is to NOT be the person who grabs the last token. Players will take turns taking 1-2 tokens until a loser has been decided" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="358.00003051757824" />
-      <Button fx:id="twoPlayerBtn" layoutX="416.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#twoPlayer" text="2 Player" />
+      <Button fx:id="twoPlayerBtn" alignment="TOP_RIGHT" layoutX="416.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#twoPlayer" text="2 Player" textAlignment="JUSTIFY" />
       <Button fx:id="onePlayerBtn" layoutX="121.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#onePlayer" text="1 Player" />
-      <Button fx:id="start" layoutX="275.0" layoutY="315.0" mnemonicParsing="false" onMouseClicked="#proceed" text="Proceed" visible="false" />
-      <TextField fx:id="player1Name" layoutX="225.0" layoutY="187.0" promptText="Player One Name" visible="false" />
-      <TextField fx:id="player2Name" layoutX="225.0" layoutY="233.0" promptText="Player 2 Name" visible="false" />
+      <Button fx:id="start" layoutX="275.0" layoutY="315.0" mnemonicParsing="false" onMouseClicked="#proceed" text="Proceed" />
+      <TextField fx:id="player1Name" alignment="CENTER" layoutX="225.0" layoutY="187.0" promptText="Player 1 Name" visible="false" />
+      <TextField fx:id="player2Name" alignment="CENTER" layoutX="225.0" layoutY="233.0" promptText="Player 2 Name" visible="false" />
+      <TextField fx:id="errorMsg" alignment="CENTER" layoutX="231.0" layoutY="289.0" />
    </children>
 </Pane>
