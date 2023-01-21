@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,8 +53,7 @@ public class GameBoard {
         return invisible == 17;
     }
 
-    @FXML
-    public void selectToken(ImageView view){
+    public void selectToken(ImageView view) {
         if(!view.isVisible()){
             view.setVisible(false);
             tokensPicked++;
@@ -62,4 +62,5 @@ public class GameBoard {
             }
         }
     }
+
 }

@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
@@ -73,8 +74,11 @@
                <HBox.margin>
                   <Insets right="25.0" />
                </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="opponent" />
+               </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="rbtnComputer" mnemonicParsing="false" text="Computer">
+            <RadioButton fx:id="rbtnComputer" mnemonicParsing="false" text="Computer" toggleGroup="$opponent">
                <font>
                   <Font size="14.0" />
                </font>
@@ -118,8 +122,11 @@
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="difficulty" />
+               </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="rbtnDiffMedium" mnemonicParsing="false" text="Medium">
+            <RadioButton fx:id="rbtnDiffMedium" mnemonicParsing="false" text="Medium" toggleGroup="$difficulty">
                <font>
                   <Font size="14.0" />
                </font>
@@ -127,14 +134,14 @@
                   <Insets right="15.0" />
                </HBox.margin>
             </RadioButton>
-            <RadioButton fx:id="rbtnDiffHard" mnemonicParsing="false" text="Hard">
+            <RadioButton fx:id="rbtnDiffHard" mnemonicParsing="false" text="Hard" toggleGroup="$difficulty">
                <font>
                   <Font size="14.0" />
                </font>
             </RadioButton>
          </children>
       </HBox>
-      <Button fx:id="btnStart" layoutX="274.0" layoutY="341.0" mnemonicParsing="false" text="Start!" AnchorPane.leftAnchor="274.0" AnchorPane.rightAnchor="274.0" AnchorPane.topAnchor="341.0">
+      <Button fx:id="btnStart" layoutX="274.0" layoutY="341.0" mnemonicParsing="false" onAction="#startGame" text="Start!" AnchorPane.leftAnchor="274.0" AnchorPane.rightAnchor="274.0" AnchorPane.topAnchor="341.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -144,5 +151,6 @@
             <Font size="14.0" />
          </font>
       </Label>
+      <Text fx:id="errorMessage" layoutX="289.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
    </children>
 </AnchorPane>

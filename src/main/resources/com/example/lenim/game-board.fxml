@@ -12,7 +12,7 @@
          <image>
             <Image url="@token.png" />
          </image></ImageView>
-      <ImageView fx:id="token7" fitHeight="83.0" fitWidth="93.0" layoutX="224.0" layoutY="287.0" onMouseClicked="#selectToken" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token7" fitHeight="83.0" fitWidth="93.0" layoutX="234.0" layoutY="287.0" onMouseClicked="#selectToken" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
