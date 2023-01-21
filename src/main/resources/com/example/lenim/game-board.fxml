@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
 
-<Pane prefHeight="637.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lenim.GameBoard">
+<Pane prefHeight="637.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lenim.GameBoard">
    <children>
-      <ImageView fx:id="token4" fitHeight="83.0" fitWidth="93.0" layoutX="176.0" layoutY="225.0" onMouseClicked="#selectToken(token4)" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token4" fitHeight="83.0" fitWidth="93.0" layoutX="141.0" layoutY="187.0" onMouseClicked="#selectToken(token4)" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image></ImageView>
@@ -35,62 +37,62 @@
             <Image url="@token.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="token6" fitHeight="83.0" fitWidth="93.0" layoutX="502.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token6" fitHeight="83.0" fitWidth="93.0" layoutX="489.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="token12" fitHeight="83.0" fitWidth="93.0" layoutX="175.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token12" fitHeight="83.0" fitWidth="93.0" layoutX="141.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="token13" fitHeight="83.0" fitWidth="93.0" layoutX="283.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token13" fitHeight="83.0" fitWidth="93.0" layoutX="259.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="token14" fitHeight="83.0" fitWidth="93.0" layoutX="394.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token14" fitHeight="83.0" fitWidth="93.0" layoutX="377.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="token15" fitHeight="83.0" fitWidth="93.0" layoutX="502.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token15" fitHeight="83.0" fitWidth="93.0" layoutX="495.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="token16" fitHeight="83.0" fitWidth="93.0" layoutX="610.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token16" fitHeight="83.0" fitWidth="93.0" layoutX="611.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="token17" fitHeight="83.0" fitWidth="93.0" layoutX="720.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token17" fitHeight="83.0" fitWidth="93.0" layoutX="721.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="token5" fitHeight="83.0" fitWidth="93.0" layoutX="283.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token5" fitHeight="83.0" fitWidth="93.0" layoutX="259.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="token2" fitHeight="83.0" fitWidth="93.0" layoutX="394.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token2" fitHeight="83.0" fitWidth="93.0" layoutX="377.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="token3" fitHeight="83.0" fitWidth="93.0" layoutX="611.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token3" fitHeight="83.0" fitWidth="93.0" layoutX="610.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="token1" fitHeight="83.0" fitWidth="93.0" layoutX="720.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token1" fitHeight="83.0" fitWidth="93.0" layoutX="727.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
       </ImageView>
       <Button fx:id="finishButton" layoutX="468.0" layoutY="508.0" mnemonicParsing="false" text="End Turn" />
-      <Label fx:id="gameLbl" layoutX="400.0" layoutY="88.0" text="X please choose on or two tokens" />
+      <Label fx:id="gameLbl" layoutX="400.0" layoutY="88.0" text="&quot;player.Name's Turn&quot;" />
    </children>
 </Pane>
