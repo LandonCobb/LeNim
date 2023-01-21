@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lenim.HelloController">
    <children>
       <Text layoutX="160.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to LeNim!" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="160.53125" AnchorPane.topAnchor="41.46875">
          <font>
@@ -36,7 +36,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Label>
-            <TextField prefHeight="23.0" prefWidth="39.0" promptText="5">
+            <TextField fx:id="minimumToken" prefHeight="23.0" prefWidth="39.0" promptText="5">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
@@ -49,7 +49,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Label>
-            <TextField prefHeight="25.0" prefWidth="42.0" promptText="17">
+            <TextField fx:id="maximinToken" prefHeight="25.0" prefWidth="42.0" promptText="17">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -66,7 +66,7 @@
                   <Insets right="25.0" />
                </padding>
             </Label>
-            <RadioButton fx:id="rbtnOpponent" mnemonicParsing="false" text="Human">
+            <RadioButton fx:id="rbtnHuman" mnemonicParsing="false" text="Human">
                <font>
                   <Font size="14.0" />
                </font>
@@ -74,7 +74,7 @@
                   <Insets right="25.0" />
                </HBox.margin>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" text="Computer">
+            <RadioButton fx:id="rbtnComputer" mnemonicParsing="false" text="Computer">
                <font>
                   <Font size="14.0" />
                </font>

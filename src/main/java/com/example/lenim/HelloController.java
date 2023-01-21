@@ -1,46 +1,46 @@
 package com.example.lenim;
-
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.ToggleGroup;
+
 import java.io.IOException;
+
 public class HelloController {
 
         @FXML
-        private Button onePlayerBtn;
+        private Button btnStart;
 
         @FXML
-        private TextField player1Name;
+        private TextField maximinToken;
 
         @FXML
-        private Button start;
+        private TextField minimumToken;
+        @FXML
+        private RadioButton rbtnHuman;
+        @FXML
+        private RadioButton rbtnComputer;
+        @FXML
+        private RadioButton rbtnDiffEasy;
 
         @FXML
-        private TextField player2Name;
+        private RadioButton rbtnDiffHard;
 
         @FXML
-        private Button twoPlayerBtn;
+        private RadioButton rbtnDiffMedium;
         @FXML
-        void onePlayer(MouseEvent event) {
-                player1Name.setVisible(true);
-                start.setVisible(true);
-                player2Name.setVisible(false);
-                player1Name.setText("");
-                player2Name.setText("");
+        private TextField txtfPlayer1Name;
+
+        @FXML
+        private TextField txtfPlayer2Name;
+
+        @FXML
+        public void startGame(Event event) throws IOException{
+
         }
 
-        @FXML
-        void twoPlayer(MouseEvent event) {
-                player1Name.setVisible(true);
-                start.setVisible(true);
-                player2Name.setVisible(true);
-                player1Name.setText("");
-        }
 
-        @FXML
-        void proceed(Event event) throws IOException {
-                ChangeScene.changeScene(event, "game-board.fxml");
-        }
+
 }
