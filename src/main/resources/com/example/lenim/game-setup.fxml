@@ -15,6 +15,7 @@
       <Text layoutX="160.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to LeNim!" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="160.53125" AnchorPane.topAnchor="41.46875">
          <font>
             <Font size="32.0" />
+
          </font>
       </Text>
       <HBox layoutX="130.0" layoutY="287.0" prefHeight="25.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="165.0">
