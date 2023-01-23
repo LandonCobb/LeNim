@@ -1,10 +1,13 @@
 package com.example.lenim;
 
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -21,6 +24,16 @@ public class GameBoard {
 
     List<ImageView> imgList = new ArrayList<>();
     List<Player> playerList = new ArrayList<>();
+
+    static GameInter gi;
+    static Stage st;
+    static Scene gameScene;
+
+    public static void start(GameInter gm, Scene gb, Stage stage){
+        gi = gm;
+        st = stage;
+        gameScene = gb;
+    }
 
     @FXML
     public void init(int amountTokens, List<Player> pList){
@@ -65,15 +78,29 @@ public class GameBoard {
         tokensPicked = 0;
         if(!checkFinish()) {
             if(playerList.get(turn%2).getName().equals("AI")) {
+                removeTokens(gi.aiGarbage());
                 //do ai here
             }else{
                 gameLbl.setText(playerList.get(turn%2).getName() + " please choose token(s).");
             }
         }else{
-            System.out.println("fin");
-            //endgame
-
+            gi.winner(playerList.get((turn%2)+1));
+            st.setScene(gameScene);
         }
+    }
+
+    public void removeTokens(int numTokens){
+        int count = numTokens;
+        for (ImageView view:imgList) {
+            if (view.isVisible()){
+                view.setVisible(false);
+                count--;
+            }
+            if(count == 0){
+                break;
+            }
+        }
+        turn();
     }
 
     public boolean checkFinish(){
@@ -89,11 +116,10 @@ public class GameBoard {
     @FXML
     public void selectToken(MouseEvent event){
         ImageView view = checkView(event);
-        System.out.println(view);
         if(view != null && view.isVisible()){
             view.setVisible(false);
             tokensPicked++;
-            if(tokensPicked == 2){
+            if(tokensPicked == 2 || checkFinish()){
                 turn();
             }
         }
