@@ -41,7 +41,7 @@ public class GameOver {
 
     public void startGame(ActionEvent actionEvent) throws IOException, InterruptedException {
         HelloController hc = new HelloController();
-        ChangeScene.changeScene(actionEvent, "game-board.fxml");
+        st.setScene(gameScene);
         hc.startGame(actionEvent);
     }
 }
