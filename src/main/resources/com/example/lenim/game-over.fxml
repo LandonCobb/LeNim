@@ -30,7 +30,7 @@
       </Text>
       <HBox layoutX="148.0" layoutY="320.0" prefHeight="33.0" prefWidth="304.0" AnchorPane.leftAnchor="148.0" AnchorPane.topAnchor="320.0">
          <children>
-            <Button fx:id="btnRematch" mnemonicParsing="false" text="Rematch">
+            <Button fx:id="btnRematch" mnemonicParsing="false" onAction="#startGame" text="Rematch">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

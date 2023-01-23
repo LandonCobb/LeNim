@@ -1,11 +1,14 @@
 package com.example.lenim;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class GameOver {
 
@@ -36,4 +39,9 @@ public class GameOver {
         gameScene = gb;
     }
 
+    public void startGame(ActionEvent actionEvent) throws IOException, InterruptedException {
+        HelloController hc = new HelloController();
+        ChangeScene.changeScene(actionEvent, "game-board.fxml");
+        hc.startGame(actionEvent);
+    }
 }
