@@ -16,12 +16,14 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         GameInter gm = new GameInter();
         FXMLLoader gameboard = new FXMLLoader(HelloApplication.class.getResource("game-board.fxml"));
+        FXMLLoader gameover = new FXMLLoader(HelloApplication.class.getResource("game-over.fxml"));
         Scene gScene = new Scene(gameboard.load());
+        Scene goScene = new Scene(gameover.load());
         GameBoard gb = (GameBoard)gameboard.getController();
         gm.init(gb);
         HelloController.start(gm, gScene, stage);
+        HelloController.start(gm, goScene,stage);
         stage.show();
-        //make fullscreen :D
     }
 
     public static void main(String[] args) {

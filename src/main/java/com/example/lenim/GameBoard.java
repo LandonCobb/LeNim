@@ -72,6 +72,7 @@ public class GameBoard {
         }else{
             System.out.println("fin");
             //endgame
+
         }
     }
 
