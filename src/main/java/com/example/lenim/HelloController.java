@@ -1,15 +1,59 @@
 package com.example.lenim;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+
+import java.io.IOException;
+
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    private TextField errorMsg;
+    @FXML
+    private Button onePlayerBtn;
+    @FXML
+    private TextField player1Name;
+    @FXML
+    private Button start;
+    @FXML
+    private TextField player2Name;
+    @FXML
+    private Button twoPlayerBtn;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to LeNim");
-        System.out.println("Hello Comire");
+    void onePlayer(MouseEvent event) {
+        player1Name.setVisible(true);
+        start.setVisible(true);
+        player2Name.setVisible(false);
+        player1Name.setText("");
+        player2Name.setText("");
     }
-}
+
+    @FXML
+    void twoPlayer(MouseEvent event) {
+        player1Name.setVisible(true);
+        start.setVisible(true);
+        player2Name.setVisible(true);
+        player1Name.setText("");
+    }
+
+    @FXML
+    void proceed(Event event) throws IOException {
+        boolean validNames = false;
+
+        do {
+            if (player1Name.getText() != "" || player2Name.getText() != "") {
+                validNames = true;
+                ChangeScene.changeScene(event, "game-board.fxml");
+                }
+            else{
+                errorMsg.setText("Please add names for BOTH players");
+            }
+            }
+            while (!validNames);
+
+        }
+    }
