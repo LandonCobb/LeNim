@@ -8,7 +8,7 @@
 
 <Pane prefHeight="637.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lenim.GameBoard">
    <children>
-      <ImageView fx:id="token4" fitHeight="83.0" fitWidth="93.0" layoutX="141.0" layoutY="187.0" onMouseClicked="#selectToken(token4)" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token4" fitHeight="83.0" fitWidth="93.0" layoutX="141.0" layoutY="187.0" onMouseClicked="#selectToken" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image></ImageView>
