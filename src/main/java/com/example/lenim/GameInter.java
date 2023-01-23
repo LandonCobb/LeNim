@@ -6,7 +6,11 @@ import java.util.List;
 public class GameInter {
 
     private List<Player> playerList = new ArrayList<>();
-    GameBoard gb = new GameBoard();
+    static GameBoard gb;
+
+    public static void init(GameBoard game){
+        gb = game;
+    }
 
     public void Start(String p1Name, String p2Name) {
         playerList = new ArrayList<>();
@@ -18,4 +22,5 @@ public class GameInter {
     public void Start(String p1Name){
         Start(p1Name, "AI");
     }
+
 }

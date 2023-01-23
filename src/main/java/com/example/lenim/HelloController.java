@@ -2,8 +2,9 @@ package com.example.lenim;
 
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -47,22 +48,34 @@ public class HelloController {
     @FXML
     private TextField txtfPlayer2Name;
 
+    static GameInter gi;
+    static Stage st;
+    static Scene gameScene;
+
+    public static void start(GameInter gm, Scene gb, Stage stage){
+        gi = gm;
+        st = stage;
+        gameScene = gb;
+    }
+
     @FXML
-    public void startGame(Event event) throws IOException {
+    public void startGame(Event event) throws IOException, InterruptedException {
         if (txtfPlayer1Name.getText().equals("") || txtfPlayer2Name.getText().equals("")) {
             errorMessage.setText("Please provide names for both players");
+
         } else if (opponent.getSelectedToggle().toString().contains("rbtnHuman")) {
             Player human = new Player(txtfPlayer1Name.getText()); //gets p1 name and makes player object with that value
             Player player2 = new Player(txtfPlayer2Name.getText());
-            ChangeScene.changeScene(event, "game-board.fxml");
+            st.setScene(gameScene);
+            gi.Start(human.getName(), player2.getName());
+
 
         } else if (opponent.getSelectedToggle().toString().contains("rbtnComputer")) {
             Player human = new Player(txtfPlayer1Name.getText());
             AI player2 = new AI(txtfPlayer2Name.getText(), 0, 0);
-            ChangeScene.changeScene(event, "game-board.fxml");
+            st.setScene(gameScene);
+            gi.Start(human.getName(), player2.getName());
 
         }
-
-        //onMouseClicked for the image views
     }
 }

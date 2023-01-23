@@ -5,14 +5,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class GameBoard {
     @FXML
-    ImageView token1, token2, token3, token4, token5, token6, token7, token8, token9, token10, token11, token12, token13, token14, token15, token16, token17;
+    private ImageView token1, token2, token3, token4, token5, token6, token7, token8, token9, token10, token11, token12, token13, token14, token15, token16, token17;
     @FXML
     Button finishButton;
     @FXML
@@ -26,7 +25,23 @@ public class GameBoard {
     @FXML
     public void init(int amountTokens, List<Player> pList){
         playerList = pList;
-        imgList = List.of(token1, token2, token3, token4, token5, token6, token7, token8, token9, token10, token11, token12, token13, token14, token15, token16, token17);
+        imgList.add(token1);
+        imgList.add(token2);
+        imgList.add(token3);
+        imgList.add(token4);
+        imgList.add(token5);
+        imgList.add(token6);
+        imgList.add(token7);
+        imgList.add(token8);
+        imgList.add(token9);
+        imgList.add(token10);
+        imgList.add(token11);
+        imgList.add(token12);
+        imgList.add(token13);
+        imgList.add(token14);
+        imgList.add(token15);
+        imgList.add(token16);
+        imgList.add(token17);
         Collections.shuffle(imgList);
         for (ImageView view: imgList) {
             view.setVisible(false);
@@ -55,6 +70,7 @@ public class GameBoard {
                 gameLbl.setText(playerList.get(turn%2).getName() + " please choose token(s).");
             }
         }else{
+            System.out.println("fin");
             //endgame
         }
     }
@@ -72,7 +88,8 @@ public class GameBoard {
     @FXML
     public void selectToken(MouseEvent event){
         ImageView view = checkView(event);
-        if(view != null && !view.isVisible()){
+        System.out.println(view);
+        if(view != null && view.isVisible()){
             view.setVisible(false);
             tokensPicked++;
             if(tokensPicked == 2){
