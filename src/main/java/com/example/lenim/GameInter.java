@@ -8,6 +8,12 @@ public class GameInter {
     private List<Player> playerList = new ArrayList<>();
     static GameBoard gb;
 
+    public void winner(Player p){
+
+    }
+    public int aiGarbage(){
+        return 1;
+    }
     public static void init(GameBoard game){
         gb = game;
     }

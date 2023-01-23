@@ -22,7 +22,7 @@ public class GameSetup extends Application {
         GameBoard gb = (GameBoard)gameboard.getController();
         gm.init(gb);
         HelloController.start(gm, gScene, stage);
-        HelloController.start(gm, goScene,stage);
+        GameBoard.start(gm, goScene,stage);
         stage.show();
     }
 
