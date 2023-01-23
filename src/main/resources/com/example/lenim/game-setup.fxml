@@ -19,44 +19,6 @@
 
          </font>
       </Text>
-      <HBox layoutX="130.0" layoutY="287.0" prefHeight="25.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="165.0">
-         <children>
-            <Label text="Token Count:">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-               <padding>
-                  <Insets right="15.0" />
-               </padding>
-            </Label>
-            <Label text="Minimum:">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <HBox.margin>
-                  <Insets right="10.0" />
-               </HBox.margin>
-            </Label>
-            <TextField fx:id="minimumToken" prefHeight="23.0" prefWidth="39.0" promptText="5">
-               <HBox.margin>
-                  <Insets right="15.0" />
-               </HBox.margin>
-            </TextField>
-            <Label text="Maximum">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <HBox.margin>
-                  <Insets right="10.0" />
-               </HBox.margin>
-            </Label>
-            <TextField fx:id="maximinToken" prefHeight="25.0" prefWidth="42.0" promptText="17">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </TextField>
-         </children>
-      </HBox>
       <HBox layoutX="139.0" layoutY="145.0" prefHeight="25.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="200.0">
          <children>
             <Label text="Select Opponent:">
@@ -67,7 +29,7 @@
                   <Insets right="25.0" />
                </padding>
             </Label>
-            <RadioButton fx:id="rbtnHuman" mnemonicParsing="false" text="Human">
+            <RadioButton fx:id="rbtnHuman" mnemonicParsing="false" selected="true" text="Human">
                <font>
                   <Font size="14.0" />
                </font>
@@ -115,7 +77,7 @@
                   <Insets right="15.0" />
                </padding>
             </Label>
-            <RadioButton fx:id="rbtnDiffEasy" mnemonicParsing="false" text="Easy">
+            <RadioButton fx:id="rbtnDiffEasy" mnemonicParsing="false" selected="true" text="Easy">
                <font>
                   <Font size="14.0" />
                </font>
@@ -151,6 +113,6 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Text fx:id="errorMessage" layoutX="289.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Label fx:id="errorMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="171.0" layoutY="167.0" prefHeight="18.0" prefWidth="279.0" />
    </children>
 </AnchorPane>
