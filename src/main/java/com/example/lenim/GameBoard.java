@@ -49,10 +49,10 @@ public class GameBoard {
         turn++;
         tokensPicked = 0;
         if(!checkFinish()) {
-            if(playerList.get(turn%2).name.equals("AI")) {
+            if(playerList.get(turn%2).getName().equals("AI")) {
                 //do ai here
             }else{
-                gameLbl.setText(playerList.get(turn%2).name + " please choose token(s).");
+                gameLbl.setText(playerList.get(turn%2).getName() + " please choose token(s).");
             }
         }else{
             //endgame
