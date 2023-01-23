@@ -1,46 +1,64 @@
 package com.example.lenim;
-
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.text.Text;
+
 import java.io.IOException;
+
 public class HelloController {
 
         @FXML
-        private Button onePlayerBtn;
+        private Text errorMessage;
 
         @FXML
-        private TextField player1Name;
+        private Button btnStart;
 
         @FXML
-        private Button start;
+        private ToggleGroup difficulty;
 
         @FXML
-        private TextField player2Name;
+        private TextField maximinToken;
 
         @FXML
-        private Button twoPlayerBtn;
+        private TextField minimumToken;
+
         @FXML
-        void onePlayer(MouseEvent event) {
-                player1Name.setVisible(true);
-                start.setVisible(true);
-                player2Name.setVisible(false);
-                player1Name.setText("");
-                player2Name.setText("");
+        private ToggleGroup opponent;
+
+        @FXML
+        private RadioButton rbtnComputer;
+
+        @FXML
+        private RadioButton rbtnDiffEasy;
+
+        @FXML
+        private RadioButton rbtnDiffHard;
+
+        @FXML
+        private RadioButton rbtnDiffMedium;
+
+        @FXML
+        private RadioButton rbtnHuman;
+
+        @FXML
+        private TextField txtfPlayer1Name;
+
+        @FXML
+        private TextField txtfPlayer2Name;
+
+        @FXML
+        public void startGame(Event event) throws IOException{
+                Player human = new Player(txtfPlayer1Name.getText()); //gets p1 name and makes player object with that value
+
+                //if the radio button for human is selected make human
+
+                //ChangeScene.changeScene(event, "game-board.fxml");
         }
 
-        @FXML
-        void twoPlayer(MouseEvent event) {
-                player1Name.setVisible(true);
-                start.setVisible(true);
-                player2Name.setVisible(true);
-                player1Name.setText("");
-        }
 
-        @FXML
-        void proceed(Event event) throws IOException {
-                ChangeScene.changeScene(event, "game-board.fxml");
-        }
+
 }
