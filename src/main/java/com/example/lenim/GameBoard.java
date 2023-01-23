@@ -84,7 +84,11 @@ public class GameBoard {
                 gameLbl.setText(playerList.get(turn%2).getName() + " please choose token(s).");
             }
         }else{
-            gi.winner(playerList.get((turn%2)+1));
+            int endTurn = (turn%2)+1;
+            if(endTurn == 2){
+                endTurn = 0;
+            }
+            gi.winner(playerList.get(endTurn));
             st.setScene(gameScene);
         }
     }
