@@ -6,22 +6,29 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lenim.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lenim.GameSetup">
    <children>
-      <Text layoutX="160.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to LeNim!" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="160.53125" AnchorPane.topAnchor="41.46875">
+      <ImageView fitHeight="600.0" fitWidth="850.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@space.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="280.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to LeNim!" AnchorPane.leftAnchor="285.0" AnchorPane.rightAnchor="285.53125" AnchorPane.topAnchor="40.46875">
          <font>
             <Font size="32.0" />
 
          </font>
       </Text>
-      <HBox layoutX="139.0" layoutY="145.0" prefHeight="25.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="200.0">
+      <HBox layoutX="253.0" layoutY="206.0" prefHeight="25.0" AnchorPane.leftAnchor="253.0" AnchorPane.topAnchor="206.0">
          <children>
-            <Label text="Select Opponent:">
+            <Label text="Select Opponent:" textFill="#f6f6f6">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -29,7 +36,7 @@
                   <Insets right="25.0" />
                </padding>
             </Label>
-            <RadioButton fx:id="rbtnHuman" mnemonicParsing="false" selected="true" text="Human">
+            <RadioButton fx:id="rbtnHuman" mnemonicParsing="false" selected="true" text="Human" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -40,16 +47,16 @@
                   <ToggleGroup fx:id="opponent" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="rbtnComputer" mnemonicParsing="false" text="Computer" toggleGroup="$opponent">
+            <RadioButton fx:id="rbtnComputer" mnemonicParsing="false" text="Computer" textFill="#fdfdfd" toggleGroup="$opponent">
                <font>
                   <Font size="14.0" />
                </font>
             </RadioButton>
          </children>
       </HBox>
-      <HBox layoutX="172.0" layoutY="187.0" AnchorPane.leftAnchor="173.0" AnchorPane.topAnchor="230.0">
+      <HBox layoutX="297.0" layoutY="322.0" AnchorPane.leftAnchor="297.0" AnchorPane.topAnchor="322.0">
          <children>
-            <Label prefHeight="25.0" prefWidth="105.0" text="Player 1 Name:">
+            <Label prefHeight="25.0" prefWidth="105.0" text="Player 1 Name:" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -57,9 +64,9 @@
             <TextField fx:id="txtfPlayer1Name" />
          </children>
       </HBox>
-      <HBox layoutX="173.0" layoutY="226.0" AnchorPane.leftAnchor="173.0" AnchorPane.topAnchor="265.0">
+      <HBox layoutX="297.0" layoutY="386.0" AnchorPane.leftAnchor="297.0" AnchorPane.topAnchor="386.0">
          <children>
-            <Label prefHeight="25.0" prefWidth="105.0" text="Player 2 Name:">
+            <Label prefHeight="25.0" prefWidth="105.0" text="Player 2 Name:" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -67,9 +74,9 @@
             <TextField fx:id="txtfPlayer2Name" />
          </children>
       </HBox>
-      <HBox layoutX="120.0" layoutY="277.0" prefHeight="25.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="305.0">
+      <HBox layoutX="230.0" layoutY="445.0" prefHeight="25.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="445.0">
          <children>
-            <Label text="Select AI Difficulty:">
+            <Label text="Select AI Difficulty:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -77,7 +84,7 @@
                   <Insets right="15.0" />
                </padding>
             </Label>
-            <RadioButton fx:id="rbtnDiffEasy" mnemonicParsing="false" selected="true" text="Easy">
+            <RadioButton fx:id="rbtnDiffEasy" mnemonicParsing="false" selected="true" text="Easy" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -88,7 +95,7 @@
                   <ToggleGroup fx:id="difficulty" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="rbtnDiffMedium" mnemonicParsing="false" text="Medium" toggleGroup="$difficulty">
+            <RadioButton fx:id="rbtnDiffMedium" mnemonicParsing="false" text="Medium" textFill="WHITE" toggleGroup="$difficulty">
                <font>
                   <Font size="14.0" />
                </font>
@@ -96,23 +103,23 @@
                   <Insets right="15.0" />
                </HBox.margin>
             </RadioButton>
-            <RadioButton fx:id="rbtnDiffHard" mnemonicParsing="false" text="Hard" toggleGroup="$difficulty">
+            <RadioButton fx:id="rbtnDiffHard" mnemonicParsing="false" text="Hard" textFill="WHITE" toggleGroup="$difficulty">
                <font>
                   <Font size="14.0" />
                </font>
             </RadioButton>
          </children>
       </HBox>
-      <Button fx:id="btnStart" layoutX="274.0" layoutY="341.0" mnemonicParsing="false" onAction="#startGame" text="Start!" AnchorPane.leftAnchor="274.0" AnchorPane.rightAnchor="274.0" AnchorPane.topAnchor="341.0">
+      <Button fx:id="btnStart" layoutX="274.0" layoutY="499.0" mnemonicParsing="false" onAction="#startGame" text="Start!" AnchorPane.leftAnchor="274.0" AnchorPane.rightAnchor="274.0" AnchorPane.topAnchor="499.0">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label ellipsisString="" layoutX="114.0" layoutY="84.0" prefHeight="83.0" prefWidth="371.0" text="The rules for the game are simple. Given a stack of tokens, each player can choose to take 1 or 2 tokens from the pile. The player forced to draw the last token loses!" textAlignment="CENTER" wrapText="true">
+      <Label ellipsisString="" layoutX="239.0" layoutY="101.0" prefHeight="83.0" prefWidth="371.0" text="The rules for the game are simple. Given a stack of tokens, each player can choose to take 1 or 2 tokens from the pile. The player forced to draw the last token loses!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="errorMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="171.0" layoutY="167.0" prefHeight="18.0" prefWidth="279.0" />
+      <Label fx:id="errorMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="285.0" layoutY="283.0" prefHeight="18.0" prefWidth="279.0" />
    </children>
 </AnchorPane>

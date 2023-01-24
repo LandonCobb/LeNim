@@ -1,34 +1,98 @@
 package com.example.lenim;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
+import javafx.event.Event;
+import javafx.fxml.FXML;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class GameSetup extends Application {
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(GameSetup.class.getResource("game-setup.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setTitle("Le Nim");
-        stage.setScene(scene);
-        GameInter gm = new GameInter();
-        FXMLLoader gameboard = new FXMLLoader(GameSetup.class.getResource("game-board.fxml"));
-        FXMLLoader gameover = new FXMLLoader(GameSetup.class.getResource("game-over.fxml"));
-        Scene gScene = new Scene(gameboard.load());
-        Scene goScene = new Scene(gameover.load());
-        GameBoard gb = (GameBoard)gameboard.getController();
-        gm.init(gb);
-        HelloController.start(gm, gScene, stage);
-        GameBoard.start(gm, goScene,stage);
-        GameOver.start(gm, gScene, stage, scene);
-        stage.show();
+public class GameSetup {
+
+    @FXML
+    private Label errorMessage;
+
+    @FXML
+    private Button btnStart;
+
+    @FXML
+    private ToggleGroup difficulty;
+
+    @FXML
+    private TextField maximinToken;
+
+    @FXML
+    private TextField minimumToken;
+
+    @FXML
+    private ToggleGroup opponent;
+
+    @FXML
+    private RadioButton rbtnComputer;
+
+    @FXML
+    private RadioButton rbtnDiffEasy;
+
+    @FXML
+    private RadioButton rbtnDiffHard;
+
+    @FXML
+    private RadioButton rbtnDiffMedium;
+    @FXML
+    private RadioButton rbtnHuman;
+
+    @FXML
+    private TextField txtfPlayer1Name;
+
+    @FXML
+    private TextField txtfPlayer2Name;
+
+    static GameInter gi;
+    static Stage st;
+    static Scene gameScene;
+
+    public static void start(GameInter gm, Scene gb, Stage stage) {
+        gi = gm;
+        st = stage;
+        gameScene = gb;
     }
 
-    public static void main(String[] args) {
-        launch();
+    @FXML
+    public void startGame(Event event) throws IOException, InterruptedException {
+        if (txtfPlayer1Name.getText().equals("") || txtfPlayer2Name.getText().equals("")) {
+            errorMessage.setText("Please provide names for both players");
+            difficulty();
+        }else if(txtfPlayer2Name.getText().equals(txtfPlayer1Name.getText())){
+            errorMessage.setText("Bro... DIFFERENT NAMES");
+
+        } else if (opponent.getSelectedToggle().toString().contains("rbtnHuman")) {
+            Player human = new Player(txtfPlayer1Name.getText()); //gets p1 name and makes player object with that value
+            Player player2 = new Player(txtfPlayer2Name.getText());
+            st.setScene(gameScene);
+            gi.Start(human, player2);
+
+
+        } else if (opponent.getSelectedToggle().toString().contains("rbtnComputer")) {
+            Player human = new Player(txtfPlayer1Name.getText());
+            AI player2 = new AI(txtfPlayer2Name.getText(), 0, difficulty());
+            st.setScene(gameScene);
+            gi.Start(human, player2);
+
+        }
     }
-    static GameInter gameInter = new GameInter();
+
+    public int difficulty() {
+        if(difficulty.getSelectedToggle().toString().contains("Easy")){
+            System.out.println("1");
+            return 1;
+        } else if(difficulty.getSelectedToggle().toString().contains("Medium")){
+            System.out.println("2");
+            return 2;
+        } else if(difficulty.getSelectedToggle().toString().contains("Hard")){
+            System.out.println("3");
+            return 3;
+        }
+        return 0;
+    }
 }
