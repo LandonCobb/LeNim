@@ -52,7 +52,7 @@ public class HelloController {
     static Stage st;
     static Scene gameScene;
 
-    public static void start(GameInter gm, Scene gb, Stage stage){
+    public static void start(GameInter gm, Scene gb, Stage stage) {
         gi = gm;
         st = stage;
         gameScene = gb;
@@ -62,6 +62,7 @@ public class HelloController {
     public void startGame(Event event) throws IOException, InterruptedException {
         if (txtfPlayer1Name.getText().equals("") || txtfPlayer2Name.getText().equals("")) {
             errorMessage.setText("Please provide names for both players");
+            difficulty();
 
         } else if (opponent.getSelectedToggle().toString().contains("rbtnHuman")) {
             Player human = new Player(txtfPlayer1Name.getText()); //gets p1 name and makes player object with that value
@@ -72,10 +73,24 @@ public class HelloController {
 
         } else if (opponent.getSelectedToggle().toString().contains("rbtnComputer")) {
             Player human = new Player(txtfPlayer1Name.getText());
-            AI player2 = new AI(txtfPlayer2Name.getText(), 0, 0);
+            AI player2 = new AI(txtfPlayer2Name.getText(), 0, difficulty());
             st.setScene(gameScene);
             gi.Start(human, player2);
 
         }
+    }
+
+    public int difficulty() {
+        if(difficulty.getSelectedToggle().toString().contains("Easy")){
+            System.out.println("1");
+            return 1;
+        } else if(difficulty.getSelectedToggle().toString().contains("Medium")){
+            System.out.println("2");
+            return 2;
+        } else if(difficulty.getSelectedToggle().toString().contains("Hard")){
+            System.out.println("3");
+            return 3;
+        }
+        return 0;
     }
 }
