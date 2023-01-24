@@ -79,9 +79,8 @@ public class GameBoard {
         turn++;
         tokensPicked = 0;
         if(!checkFinish()) {
-            if(playerList.get(turn%2).getName().equals("AI")) {
+            if(playerList.get(turn%2).getClass() == AI.class) {
                 removeTokens(gi.aiGarbage());
-                //do ai here
             }else{
                 gameLbl.setText(playerList.get(turn%2).getName() + " please choose token(s).");
             }
@@ -90,7 +89,7 @@ public class GameBoard {
             if(endTurn == 2){
                 endTurn = 0;
             }
-            gi.winner(playerList.get(endTurn));
+            gi.Save(playerList.get(endTurn));
             st.setScene(gameScene);
         }
     }
@@ -102,7 +101,7 @@ public class GameBoard {
                 view.setVisible(false);
                 count--;
             }
-            if(count == 0){
+            if(count == 0 || checkFinish()){
                 break;
             }
         }

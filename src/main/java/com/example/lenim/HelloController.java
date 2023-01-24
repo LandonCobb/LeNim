@@ -67,14 +67,14 @@ public class HelloController {
             Player human = new Player(txtfPlayer1Name.getText()); //gets p1 name and makes player object with that value
             Player player2 = new Player(txtfPlayer2Name.getText());
             st.setScene(gameScene);
-            gi.Start(human.getName(), player2.getName());
+            gi.Start(human, player2);
 
 
         } else if (opponent.getSelectedToggle().toString().contains("rbtnComputer")) {
             Player human = new Player(txtfPlayer1Name.getText());
             AI player2 = new AI(txtfPlayer2Name.getText(), 0, 0);
             st.setScene(gameScene);
-            gi.Start(human.getName(), player2.getName());
+            gi.Start(human, player2);
 
         }
     }
