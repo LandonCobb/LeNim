@@ -35,12 +35,12 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button fx:id="btnNewOpponent" mnemonicParsing="false" text="Select New Opponent">
+            <Button fx:id="btnNewOpponent" mnemonicParsing="false" onAction="#restartGame" text="Select New Opponent">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnExit" mnemonicParsing="false" text="Exit Game">
+            <Button fx:id="btnExit" mnemonicParsing="false" onAction="#exit" text="Exit Game">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>

@@ -38,23 +38,25 @@ public class GameBoard {
     @FXML
     public void init(int amountTokens, List<Player> pList){
         playerList = pList;
-        imgList.add(token1);
-        imgList.add(token2);
-        imgList.add(token3);
-        imgList.add(token4);
-        imgList.add(token5);
-        imgList.add(token6);
-        imgList.add(token7);
-        imgList.add(token8);
-        imgList.add(token9);
-        imgList.add(token10);
-        imgList.add(token11);
-        imgList.add(token12);
-        imgList.add(token13);
-        imgList.add(token14);
-        imgList.add(token15);
-        imgList.add(token16);
-        imgList.add(token17);
+        if(imgList.isEmpty()) {
+            imgList.add(token1);
+            imgList.add(token2);
+            imgList.add(token3);
+            imgList.add(token4);
+            imgList.add(token5);
+            imgList.add(token6);
+            imgList.add(token7);
+            imgList.add(token8);
+            imgList.add(token9);
+            imgList.add(token10);
+            imgList.add(token11);
+            imgList.add(token12);
+            imgList.add(token13);
+            imgList.add(token14);
+            imgList.add(token15);
+            imgList.add(token16);
+            imgList.add(token17);
+        }
         Collections.shuffle(imgList);
         for (ImageView view: imgList) {
             view.setVisible(false);

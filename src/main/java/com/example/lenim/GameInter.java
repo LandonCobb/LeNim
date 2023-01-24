@@ -18,6 +18,10 @@ public class GameInter {
         gb = game;
     }
 
+    public void Start(){
+        gb.init(((int) (Math.random()*12)+5), playerList);
+    }
+
     public void Start(String p1Name, String p2Name) {
         playerList = new ArrayList<>();
         playerList.add(new Player(p1Name));

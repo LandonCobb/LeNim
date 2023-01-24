@@ -23,6 +23,7 @@ public class GameSetup extends Application {
         gm.init(gb);
         HelloController.start(gm, gScene, stage);
         GameBoard.start(gm, goScene,stage);
+        GameOver.start(gm, gScene, stage, scene);
         stage.show();
     }
 

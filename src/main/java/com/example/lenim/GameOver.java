@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -32,16 +33,25 @@ public class GameOver {
     static GameInter gi;
     static Stage st;
     static Scene gameScene;
+    static Scene setupScene;
 
-    public static void start(GameInter gm, Scene gb, Stage stage){
+    public static void start(GameInter gm, Scene gb, Stage stage, Scene gs){
         gi = gm;
         st = stage;
         gameScene = gb;
+        setupScene = gs;
     }
 
-    public void startGame(ActionEvent actionEvent) throws IOException, InterruptedException {
-        HelloController hc = new HelloController();
+    public void startGame() {
         st.setScene(gameScene);
-        hc.startGame(actionEvent);
+        gi.Start();
+    }
+
+    public void restartGame(){
+        st.setScene(setupScene);
+    }
+
+    public void exit(){
+        st.close();
     }
 }
