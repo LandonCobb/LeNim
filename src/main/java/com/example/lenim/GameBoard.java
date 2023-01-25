@@ -80,7 +80,7 @@ public class GameBoard {
         tokensPicked = 0;
         if(!checkFinish()) {
             if(playerList.get(turn%2).getClass() == AI.class) {
-                removeTokens(gi.aiGarbage());
+                removeTokens(((AI)playerList.get(turn%2)).calcTurn(tokensLeft(),false));
             }else{
                 gameLbl.setText(playerList.get(turn%2).getName() + " please choose token(s).");
             }
@@ -89,7 +89,8 @@ public class GameBoard {
             if(endTurn == 2){
                 endTurn = 0;
             }
-            gi.Save(playerList.get(endTurn));
+            System.out.println(turn%2);
+            gi.Save(playerList.get(turn%2));
             st.setScene(gameScene);
         }
     }
@@ -106,6 +107,16 @@ public class GameBoard {
             }
         }
         turn();
+    }
+
+    public int tokensLeft(){
+        int remaining = 0;
+        for (ImageView view: imgList) {
+            if(!view.isVisible()){
+                remaining++;
+            }
+        }
+        return remaining;
     }
 
     public boolean checkFinish(){

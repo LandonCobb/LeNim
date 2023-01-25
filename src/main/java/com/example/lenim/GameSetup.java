@@ -75,7 +75,7 @@ public class GameSetup {
 
         } else if (opponent.getSelectedToggle().toString().contains("rbtnComputer")) {
             Player human = new Player(txtfPlayer1Name.getText());
-            AI player2 = new AI(txtfPlayer2Name.getText(), 0, difficulty());
+            AI player2 = new AI("Mr. AI", 0, difficulty());
             st.setScene(gameScene);
             gi.Start(human, player2);
 

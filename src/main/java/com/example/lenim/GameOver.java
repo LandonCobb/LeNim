@@ -30,6 +30,9 @@ public class GameOver {
 
     @FXML
     private Text txtPlayerWin;
+
+    @FXML
+    private Text tLeader;
     static GameInter gi;
     static Stage st;
     static Scene gameScene;
@@ -40,6 +43,11 @@ public class GameOver {
         st = stage;
         gameScene = gb;
         setupScene = gs;
+    }
+
+    public void endGame(String winnerName){
+        txtPlayerWin.setText(winnerName + " won!");
+        tLeader.setText(gi.LeaderStrings());
     }
 
     public void startGame() {

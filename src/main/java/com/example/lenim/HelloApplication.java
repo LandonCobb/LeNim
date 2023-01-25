@@ -20,7 +20,8 @@ public class HelloApplication extends Application {
         Scene gScene = new Scene(gameboard.load());
         Scene goScene = new Scene(gameover.load());
         GameBoard gb = (GameBoard)gameboard.getController();
-        gm.init(gb);
+        GameOver go = (GameOver)gameover.getController();
+        GameInter.init(gb, go);
         GameSetup.start(gm, gScene, stage);
         GameBoard.start(gm, goScene,stage);
         GameOver.start(gm, gScene, stage, scene);

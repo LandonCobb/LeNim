@@ -1,6 +1,8 @@
 package com.example.lenim;
 
-public class Player {
+import java.io.Serializable;
+
+public class Player implements Serializable, Comparable<Player>{
     private String name;
     private int score;
 
@@ -27,4 +29,17 @@ public class Player {
 
     static GameInter gameInter = new GameInter();
 
+    @Override
+    public int compareTo(Player p)
+    {
+        if (this.score != p.getScore()) {
+            return p.getScore() - this.score;
+        }
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        return name + "<==>" + score;
+    }
 }

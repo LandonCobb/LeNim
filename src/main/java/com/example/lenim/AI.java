@@ -12,7 +12,7 @@ public class AI extends Player{
 
     public int calcTurn(int tokensLeft, boolean isStartingPlayer) {
         Random random = new Random();
-        switch (difficulty) { //
+        switch (difficulty) {
             case 1: {
                 return (tokensLeft > 1 ? random.nextInt(1,3 ) : 1);
             }
@@ -28,5 +28,6 @@ public class AI extends Player{
                 }
             }
         }
+        return 1;
     }
 }
