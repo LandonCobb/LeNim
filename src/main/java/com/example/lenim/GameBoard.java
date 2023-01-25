@@ -112,7 +112,7 @@ public class GameBoard {
     public int tokensLeft(){
         int remaining = 0;
         for (ImageView view: imgList) {
-            if(!view.isVisible()){
+            if(view.isVisible()){
                 remaining++;
             }
         }

@@ -5,6 +5,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <Pane prefHeight="566.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lenim.GameBoard">
    <children>
@@ -17,7 +18,7 @@
          <image>
             <Image url="@token.png" />
          </image></ImageView>
-      <ImageView fx:id="token7" fitHeight="83.0" fitWidth="93.0" layoutX="175.0" layoutY="278.0" onMouseClicked="#selectToken" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="token7" fitHeight="83.0" fitWidth="93.0" layoutX="160.0" layoutY="278.0" onMouseClicked="#selectToken" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@token.png" />
          </image>
@@ -98,6 +99,9 @@
          </image>
       </ImageView>
       <Button fx:id="finishButton" layoutX="399.0" layoutY="516.0" mnemonicParsing="false" onAction="#finishTurn" text="End Turn" />
-      <Label fx:id="gameLbl" layoutX="361.0" layoutY="90.0" text="&quot;player.Name's Turn&quot;" textFill="WHITE" />
+      <Label fx:id="gameLbl" layoutX="336.0" layoutY="85.0" text="&quot;player.Name's Turn&quot;" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
    </children>
 </Pane>

@@ -36,7 +36,7 @@
                   <Insets right="25.0" />
                </padding>
             </Label>
-            <RadioButton fx:id="rbtnHuman" mnemonicParsing="false" selected="true" text="Human" textFill="WHITE">
+            <RadioButton fx:id="rbtnHuman" mnemonicParsing="false" onAction="#toggleView" selected="true" text="Human" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -47,7 +47,7 @@
                   <ToggleGroup fx:id="opponent" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="rbtnComputer" mnemonicParsing="false" text="Computer" textFill="#fdfdfd" toggleGroup="$opponent">
+            <RadioButton fx:id="rbtnComputer" mnemonicParsing="false" onAction="#toggleView" text="Computer" textFill="#fdfdfd" toggleGroup="$opponent">
                <font>
                   <Font size="14.0" />
                </font>
@@ -64,7 +64,7 @@
             <TextField fx:id="txtfPlayer1Name" />
          </children>
       </HBox>
-      <HBox layoutX="297.0" layoutY="386.0" AnchorPane.leftAnchor="297.0" AnchorPane.topAnchor="386.0">
+      <HBox fx:id="player2NameBox" layoutX="296.0" layoutY="377.0" AnchorPane.leftAnchor="296.0" AnchorPane.topAnchor="377.0">
          <children>
             <Label prefHeight="25.0" prefWidth="105.0" text="Player 2 Name:" textFill="WHITE">
                <font>
@@ -74,7 +74,7 @@
             <TextField fx:id="txtfPlayer2Name" />
          </children>
       </HBox>
-      <HBox layoutX="230.0" layoutY="445.0" prefHeight="25.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="445.0">
+      <HBox fx:id="aiSettings" layoutX="228.0" layoutY="380.0" prefHeight="43.0" prefWidth="391.0" visible="false" AnchorPane.leftAnchor="228.0" AnchorPane.topAnchor="380.0">
          <children>
             <Label text="Select AI Difficulty:" textFill="WHITE">
                <font>

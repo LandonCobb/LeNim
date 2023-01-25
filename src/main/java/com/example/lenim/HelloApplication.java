@@ -25,7 +25,6 @@ public class HelloApplication extends Application {
         GameSetup.start(gm, gScene, stage);
         GameBoard.start(gm, goScene,stage);
         GameOver.start(gm, gScene, stage, scene);
-
         stage.show();
     }
 
