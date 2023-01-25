@@ -7,7 +7,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

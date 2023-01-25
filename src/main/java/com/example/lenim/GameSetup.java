@@ -27,20 +27,6 @@ public class GameSetup {
     private ToggleGroup opponent;
 
     @FXML
-    private RadioButton rbtnComputer;
-
-    @FXML
-    private RadioButton rbtnDiffEasy;
-
-    @FXML
-    private RadioButton rbtnDiffHard;
-
-    @FXML
-    private RadioButton rbtnDiffMedium;
-    @FXML
-    private RadioButton rbtnHuman;
-
-    @FXML
     private TextField txtfPlayer1Name;
 
     @FXML
